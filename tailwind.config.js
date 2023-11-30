@@ -4,9 +4,17 @@ export default {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      cooper: ['cooper', 'sans-serif'],
+      cooper: ['Cooper Hewitt', 'sans-serif'],
     },
     extend: {},
+    colors: {
+      current: 'currentColor',
+      transparent: 'transparent',
+      white: '#FFFFFF',
+      primary: '#FBCB3B',
+      secondary: '#161616',
+      tertiary: '#FFF7E9',
+    }
   },
   plugins: [],
 }
