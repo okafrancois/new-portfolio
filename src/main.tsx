@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.scss";
-import "./cooper.scss";
-import "./inter.scss";
-import GridOverlay from "./layout/grid-overlay/GridOverlay.tsx";
+import "./assets/fonts/cooper/cooper.scss";
+import "./assets/fonts/inter/inter.scss";
+import GridOverlay from "./layout/GridOverlay.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

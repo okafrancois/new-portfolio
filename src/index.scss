@@ -11,48 +11,40 @@
     @apply w-full;
   }
 
+  .dark {
+    @apply bg-primary text-alternative
+  }
+
   .button {
-    @apply px-4 py-2 rounded-full font-medium text-base inline-flex items-center justify-center transition duration-300 ease-in-out;
+    @apply border border-transparent px-4 py-2 rounded-full font-medium text-base inline-flex items-center justify-center transition duration-300 ease-in-out;
 
     &.primary {
-      @apply bg-primary text-white;
+      @apply bg-primary text-white dark:bg-alternative dark:text-primary;
 
-      @media (prefers-color-scheme: dark) {
-        @apply bg-alternative text-primary
+      &:hover {
+        @apply bg-transparent border-primary text-primary dark:bg-primary dark:text-alternative dark:border-alternative;
       }
     }
 
     &.secondary {
-      @apply bg-alternative text-primary;
+      @apply bg-alternative text-primary dark:bg-primary dark:text-alternative;
 
-      @media (prefers-color-scheme: dark) {
-        @apply bg-primary text-white
+      &:hover {
+        @apply bg-primary text-white dark:bg-alternative dark:text-primary;
       }
     }
 
     &.alternative {
-      @apply bg-transparent text-primary border border-primary;
+      @apply bg-transparent text-primary border border-primary dark:text-alternative dark:border-alternative;
 
       &:hover {
-        @apply bg-primary text-white;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        @apply bg-transparent text-alternative border border-alternative;
-
-        &:hover {
-          @apply bg-alternative text-primary;
-        }
+        @apply bg-primary text-white dark:bg-alternative dark:text-primary;
       }
     }
   }
 
   .bubble-item {
-    @apply flex items-center  justify-center py-2 px-4 border-primary border text-sm rounded-full;
-
-    @media (prefers-color-scheme: dark) {
-      @apply border-alternative text-alternative;
-    }
+    @apply flex items-center justify-center py-2 px-4 border-primary border text-sm rounded-full dark:border-alternative dark:text-alternative dark:bg-primary;
   }
 
 }
@@ -61,17 +53,6 @@
   font-family: "Inter", sans-serif;
   line-height: normal;
   font-weight: 400;
-  color-scheme: light dark;
-  
-  @media (prefers-color-scheme: light) {
-    color: #161616;
-    background-color: #fff;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    color: #FFF7E9;
-    background-color: #161616;
-  }
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

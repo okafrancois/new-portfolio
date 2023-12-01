@@ -14,7 +14,7 @@ export default function IconTitle({
   return (
     <h3
       className={
-        "flex items-center gap-x-2 font-semibold font-cooper" +
+        "flex mb-4 items-center gap-x-2 font-semibold font-cooper" +
         ` ${customClass}`
       }
     >
