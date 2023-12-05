@@ -60,5 +60,15 @@ module.exports = {
       red: "#FF0000",
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant, e }) {
+      addVariant("nth-child-even", ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(
+            `nth-child-even${separator}${className}`,
+          )}:nth-child(even)`;
+        });
+      });
+    },
+  ],
 };

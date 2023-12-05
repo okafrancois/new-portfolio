@@ -129,7 +129,7 @@ interface SkillSection {
 
 export default function SkillsSection() {
   return (
-    <Section customClass={"py-[200px] flex flex-col"}>
+    <Section customClass={"py-5 lg:py-[10rem] flex flex-col"}>
       <IconTitle
         customClass={"!mb-15 text-xl"}
         title={"About my skills"}
@@ -137,11 +137,11 @@ export default function SkillsSection() {
       />
 
       <div
-        className={`skills max-w-[70vw] w-full mx-auto grid gap-10 grid-cols-3`}
+        className={`skills lg:max-w-[70vw] w-full mx-auto grid gap-10 grid-cols-1 lg:grid-cols-3`}
       >
         {datas.map((data) => (
           <div key={data.id} className="skill">
-            <h4 className="button w-full primary skill-title mb-4">
+            <h4 className="button lg:w-full primary skill-title mb-4">
               {data.title}
             </h4>
 

@@ -15,7 +15,7 @@ export default function ProjectsSection() {
         titleId={"projects"}
       />
 
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-16 lg:gap-0">
         {projects.map((project, index) => (
           <FeaturedProject data={project} key={project.id} index={index} />
         ))}

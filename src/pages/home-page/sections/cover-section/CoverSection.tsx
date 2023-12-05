@@ -30,10 +30,10 @@ export default function CoverSection() {
           />
         </div>
       </div>
-      <div className="infos-part pb-gutter mb-5 lg:mb-10 flex gap-y-8 justify-between flex-wrap">
+      <div className="infos-part mb-5 lg:mb-0 flex gap-y-8 justify-between flex-wrap">
         <div className="about-me max-w-[400px]">
           <IconTitle customClass={"mb-3"} title={"About Me"} icon={aboutIcon} />
-          <p className="text lg:pl-9">
+          <p className="text lg:pl-8">
             I'm a Frontend Developer based in France. I have a serious passion
             for UI effects, animations and creating intuitive, dynamic user
             experiences. Let's make something special.
@@ -45,7 +45,7 @@ export default function CoverSection() {
             title={"Quick resume"}
             icon={infosBubble}
           />
-          <div className="lg:pl-10 details-rows flex flex-col gap-y-2">
+          <div className="lg:pl-8 details-rows flex flex-col gap-y-2">
             <ul className={"details-items flex flex-wrap gap-2"}>
               <li className={"hidden md:block"}>
                 <p

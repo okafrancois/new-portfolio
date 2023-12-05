@@ -12,10 +12,12 @@ interface FeaturedProjectProps {
 
 export default function FeaturedProject({ data }: FeaturedProjectProps) {
   return (
-    <div className="featured-project grid  w-full grid-cols-2 gap-x-4 lg:max-w-[80%]">
-      <div className={"cover relative overflow-hidden rounded-2xl"}>
+    <div className="featured-project flex flex-col lg:flex-row lg:nth-child-even:self-end lg:nth-child-even:flex-row-reverse w-full gap-8 lg:max-w-[80%]">
+      <div className={"cover min-w-[50%] relative overflow-hidden rounded-2xl"}>
         <img
-          className={"w-full aspect-[532/630] h-auto object-cover"}
+          className={
+            "w-full aspect-[300/200] lg:aspect-[532/630] h-auto object-cover"
+          }
           src={data.image}
           alt={"project cover for " + data.enterprise}
         />
