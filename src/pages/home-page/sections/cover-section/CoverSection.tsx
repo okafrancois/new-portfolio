@@ -1,14 +1,19 @@
 import IconTitle from "../../../../components/IconTitle.tsx";
 import { aboutIcon, infosBubble } from "../../../../assets/icon-lib.tsx";
 import Section from "../../../../layout/Section.tsx";
+import { Button } from "../../../../components/Button.tsx";
 
 export default function CoverSection() {
   return (
-    <Section customClass={"h-[100vh] flex flex-col justify-center relative"}>
-      <div className="base-part flex-grow flex items-center gap-x-[100px]">
-        <h1 className={"flex flex-col flex-grow"}>
+    <Section
+      customClass={"min-h-[100dvh] py-10 flex flex-col justify-center relative"}
+    >
+      <div className="py-20 lg:py-0 base-part mb-8 flex-grow flex flex-col lg:flex-row lg:items-center gap-y-4 gap-x-[4rem]">
+        <h1 className={"flex max-w-max flex-col text-md lg:flex-grow"}>
           <span className="sub-title font-bold">Hello there, I'm</span>
-          <span className="title text-[100px] font-black">Berny Itoutou</span>
+          <span className="min-w-max title text-[3rem] md:text-[5rem] lg:text-[7rem] font-black">
+            Berny Itoutou
+          </span>
           <span>
             {" "}
             I'm a <span className="font-bold">Frontend Developer</span> based in
@@ -16,55 +21,82 @@ export default function CoverSection() {
           </span>
         </h1>
         <div className="cover-cta flex items-end min-w-[30%]">
-          <a className={"button alternative text-2xl"} href="#projects">
-            See my work
-          </a>
+          <Button
+            theme={"alternative"}
+            customClass={"text-md lg:text-xl px-8 lg:!px-15 lg:!py-4"}
+            label={"Explore my work"}
+            link={"#projects"}
+            target={"_self"}
+          />
         </div>
       </div>
-      <div className="infos-part pb-gutter flex justify-between">
-        <div className="about-me max-w-[350px]">
+      <div className="infos-part pb-gutter mb-5 lg:mb-10 flex gap-y-8 justify-between flex-wrap">
+        <div className="about-me max-w-[400px]">
           <IconTitle customClass={"mb-3"} title={"About Me"} icon={aboutIcon} />
-          <p className="text pl-9">
+          <p className="text lg:pl-9">
             I'm a Frontend Developer based in France. I have a serious passion
             for UI effects, animations and creating intuitive, dynamic user
             experiences. Let's make something special.
           </p>
         </div>
-        <div className="details w-full max-w-[500px]">
+        <div className="details w-full lg:max-w-max">
           <IconTitle
             customClass={"mb-3"}
             title={"Quick resume"}
             icon={infosBubble}
           />
-          <div className="pl-10 details-rows flex flex-col gap-y-2">
-            <ul className={"details-items flex gap-x-2"}>
-              <li>
-                <p className={"bubble-item min-w-max alternative"}>
+          <div className="lg:pl-10 details-rows flex flex-col gap-y-2">
+            <ul className={"details-items flex flex-wrap gap-2"}>
+              <li className={"hidden md:block"}>
+                <p
+                  className={
+                    "bubble-item min-w-max primary opacity-70 pointer-events-none"
+                  }
+                >
                   Frontend Developer
                 </p>
               </li>
               <li>
-                <p className={"bubble-item min-w-max alternative"}>
+                <p
+                  className={
+                    "bubble-item min-w-max primary opacity-70 pointer-events-none"
+                  }
+                >
                   Specialised in Javascript
                 </p>
               </li>
             </ul>
-            <ul className={"details-items flex gap-x-2"}>
+            <ul className={"details-items flex flex-wrap gap-2"}>
               <li>
-                <p className={"bubble-item min-w-max alternative"}>
+                <p
+                  className={
+                    "bubble-item min-w-max alternative border-dashed opacity-50 pointer-events-none"
+                  }
+                >
                   3+ years of experience
                 </p>
               </li>
-              <li>
-                <p className={"bubble-item min-w-max alternative"}>Freelance</p>
+
+              <li className={"hidden md:block"}>
+                <p
+                  className={
+                    "bubble-item min-w-max alternative border-dashed opacity-50 pointer-events-none"
+                  }
+                >
+                  Freelance
+                </p>
               </li>
               <li>
-                <p className={"bubble-item min-w-max alternative"}>
+                <p
+                  className={
+                    "bubble-item min-w-max alternative border-dashed opacity-50 pointer-events-none"
+                  }
+                >
                   Remote / Hybride
                 </p>
               </li>
             </ul>
-            <ul className={"details-items flex gap-x-2"}>
+            <ul className={"details-items flex flex-wrap gap-2"}>
               <li>
                 <a
                   href={"https://sowen-group.fr"}
@@ -81,7 +113,7 @@ export default function CoverSection() {
                   alvo.market
                 </a>
               </li>
-              <li>
+              <li className={"hidden md:block"}>
                 <a
                   href={"https://futuribles.fr"}
                   className={"bubble-item min-w-max alternative"}

@@ -1,0 +1,9 @@
+.featured-project {
+  &:nth-child(even) {
+    .cover {
+      order: 1;
+    }
+
+    align-self: flex-end;
+  }
+}

@@ -3,8 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+
+  #root {
+    width: 100vw;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+
   .c-container {
-    @apply w-full px-margin;
+    @apply w-full px-margin-sm md:px-margin-md lg:px-margin-lg wd:px-margin-wd;
   }
 
   .c-full-container {
@@ -17,6 +24,12 @@
 
   .button {
     @apply border border-transparent px-4 py-2 rounded-full font-medium text-base inline-flex items-center justify-center transition duration-300 ease-in-out;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 
     &.primary {
       @apply bg-primary text-white dark:bg-alternative dark:text-primary;
@@ -44,7 +57,11 @@
   }
 
   .bubble-item {
-    @apply flex items-center justify-center py-2 px-4 border-primary border text-sm rounded-full dark:border-alternative dark:text-alternative dark:bg-primary;
+    @apply button text-sm px-2 lg:px-4 border-primary border lg:text-base rounded-full dark:border-alternative dark:text-alternative dark:bg-primary;
+  }
+
+  header + * {
+    padding-top: 5rem;
   }
 
 }
@@ -53,6 +70,7 @@
   font-family: "Inter", sans-serif;
   line-height: normal;
   font-weight: 400;
+  scroll-behavior: smooth;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

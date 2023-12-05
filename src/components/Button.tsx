@@ -6,12 +6,13 @@ interface ButtonProps {
   onClick?: (
     e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>,
   ) => void;
-  link?: string;
   type?: "button" | "submit" | "reset";
   theme?: string;
   id?: string;
   baseClass?: string;
   customClass?: string;
+  link?: string;
+  target?: "_blank" | "_self" | "_parent" | "_top";
 }
 
 export function Button({
@@ -24,6 +25,7 @@ export function Button({
   theme = "primary",
   customClass = "",
   link,
+  target,
 }: ButtonProps) {
   return (
     <>
@@ -42,6 +44,7 @@ export function Button({
 
       {link && (
         <a
+          target={target ?? "_self"}
           href={link}
           id={id}
           onClick={(e) => onClick?.(e)}

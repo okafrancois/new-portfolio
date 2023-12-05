@@ -1,4 +1,4 @@
-import { darkModeIcon, lightModeIcon } from "../../../../assets/icon-lib.tsx";
+import { darkModeIcon, toolIcon } from "../../../../assets/icon-lib.tsx";
 import { ReactNode } from "react";
 import Section from "../../../../layout/Section.tsx";
 import IconTitle from "../../../../components/IconTitle.tsx";
@@ -115,7 +115,7 @@ const datas: SkillSection[] = [
   },
 ];
 
-interface Skill {
+export interface Skill {
   id: string;
   name: string;
   icon: ReactNode;
@@ -129,21 +129,23 @@ interface SkillSection {
 
 export default function SkillsSection() {
   return (
-    <Section customClass={"h-[100vh] py-[200px] flex flex-col"}>
+    <Section customClass={"py-[200px] flex flex-col"}>
       <IconTitle
-        customClass={"mb-8"}
-        title={"Skills Overview"}
-        icon={lightModeIcon}
+        customClass={"!mb-15 text-xl"}
+        title={"About my skills"}
+        icon={toolIcon}
       />
 
-      <div className={`skills grid gap-8 grid-cols-${datas.length}`}>
+      <div
+        className={`skills max-w-[70vw] w-full mx-auto grid gap-10 grid-cols-3`}
+      >
         {datas.map((data) => (
           <div key={data.id} className="skill">
             <h4 className="button w-full primary skill-title mb-4">
               {data.title}
             </h4>
 
-            <ul className="skill-list flex flex-col gap-4">
+            <ul className="skill-list flex flex-wrap gap-4">
               {data.skills.map((skill) => (
                 <Skill
                   key={skill.id}
@@ -164,7 +166,7 @@ function Skill({ name, icon }: Skill) {
   return (
     <li
       className={
-        "button bg-alternative max-w-[200px] w-full dark:bg-transparent dark:border-alternative flex gap-x-2 items-center"
+        "button bg-alternative min-w-max max-w-max dark:bg-transparent dark:border-alternative inline-flex gap-x-2 items-center"
       }
     >
       <span className={"w-6 h-6 aspect-square"}>{icon}</span>
