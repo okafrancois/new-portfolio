@@ -1,10 +1,11 @@
-import { ReactNode } from "react";
+import { LegacyRef, ReactNode } from "react";
 
 interface IconTitleProps {
   title: string | ReactNode;
   icon: ReactNode;
   customClass?: string;
   titleId?: string;
+  itemRef?: LegacyRef<HTMLHeadingElement>;
 }
 
 export default function IconTitle({
@@ -12,9 +13,11 @@ export default function IconTitle({
   title,
   customClass,
   titleId,
+  itemRef,
 }: Readonly<IconTitleProps>) {
   return (
     <h3
+      ref={itemRef}
       className={
         "flex mb-4 items-center gap-x-2 font-semibold font-cooper" +
         ` ${customClass}`

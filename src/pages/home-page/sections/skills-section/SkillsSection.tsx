@@ -1,8 +1,14 @@
 import { darkModeIcon, toolIcon } from "../../../../assets/icon-lib.tsx";
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import Section from "../../../../layout/Section.tsx";
 import IconTitle from "../../../../components/IconTitle.tsx";
 import { ulid } from "ulid";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
+import { customCubic } from "../../../../App.tsx";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const datas: SkillSection[] = [
   {
@@ -128,9 +134,19 @@ interface SkillSection {
 }
 
 export default function SkillsSection() {
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+
+  useFadeInAnimation({
+    ref: titleRef,
+    duration: 0.5,
+    triggerScroll: true,
+    ease: customCubic,
+  });
+
   return (
-    <Section customClass={"py-5 lg:py-[10rem] flex flex-col"}>
+    <Section id={"skills"} customClass={"py-5 lg:py-[10rem] flex flex-col"}>
       <IconTitle
+        itemRef={titleRef}
         customClass={"!mb-15 text-xl"}
         title={"About my skills"}
         icon={toolIcon}
@@ -139,26 +155,47 @@ export default function SkillsSection() {
       <div
         className={`skills lg:max-w-[70vw] w-full mx-auto grid gap-10 grid-cols-1 lg:grid-cols-3`}
       >
-        {datas.map((data) => (
-          <div key={data.id} className="skill">
-            <h4 className="button lg:w-full primary skill-title mb-4">
-              {data.title}
-            </h4>
-
-            <ul className="skill-list flex flex-wrap gap-4">
-              {data.skills.map((skill) => (
-                <Skill
-                  key={skill.id}
-                  name={skill.name}
-                  icon={skill.icon}
-                  id={skill.id}
-                />
-              ))}
-            </ul>
-          </div>
+        {datas.map((data, index) => (
+          <SkillsBlock key={data.id} data={data} index={index} />
         ))}
       </div>
     </Section>
+  );
+}
+
+interface SkillsBlockTypes {
+  data: SkillSection;
+  index: number;
+}
+
+function SkillsBlock({ data, index = 0 }: SkillsBlockTypes) {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useFadeInAnimation({
+    ref: sectionRef,
+    duration: 0.5,
+    delay: parseInt(`${0}.${index}`),
+    triggerScroll: true,
+    ease: customCubic,
+  });
+
+  return (
+    <div ref={sectionRef} className="skill">
+      <h4 className="button lg:w-full primary skill-title mb-4">
+        {data.title}
+      </h4>
+
+      <ul className="skill-list flex flex-wrap gap-4">
+        {data.skills.map((skill) => (
+          <Skill
+            key={skill.id}
+            name={skill.name}
+            icon={skill.icon}
+            id={skill.id}
+          />
+        ))}
+      </ul>
+    </div>
   );
 }
 

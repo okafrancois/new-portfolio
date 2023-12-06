@@ -4,15 +4,30 @@ import IconTitle from "../../../../components/IconTitle.tsx";
 import { lightModeIcon } from "../../../../assets/icon-lib.tsx";
 import Section from "../../../../layout/Section.tsx";
 import FeaturedProject from "./FeaturedProject.tsx";
+import { useRef } from "react";
+import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
+import { customCubic } from "../../../../App.tsx";
 
 export default function ProjectsSection() {
+  const sectionTitle = useRef<HTMLHeadingElement | null>(null);
+
+  useFadeInAnimation({
+    ref: sectionTitle,
+    duration: 0.5,
+    triggerScroll: true,
+    ease: customCubic,
+  });
+
   return (
-    <Section customClass={"min-h-[100vh] py-[100px] flex flex-col"}>
+    <Section
+      id={"projects"}
+      customClass={"min-h-[100vh] py-[100px] flex flex-col"}
+    >
       <IconTitle
+        itemRef={sectionTitle}
         customClass={"!mb-15 text-xl"}
         title={"Project selection"}
         icon={lightModeIcon}
-        titleId={"projects"}
       />
 
       <div className="flex flex-col gap-16 lg:gap-0">

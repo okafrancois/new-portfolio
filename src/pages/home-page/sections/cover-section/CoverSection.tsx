@@ -2,41 +2,103 @@ import IconTitle from "../../../../components/IconTitle.tsx";
 import { aboutIcon, infosBubble } from "../../../../assets/icon-lib.tsx";
 import Section from "../../../../layout/Section.tsx";
 import { Button } from "../../../../components/Button.tsx";
+import { useRef } from "react";
+import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
+import { customCubic } from "../../../../App.tsx";
 
 export default function CoverSection() {
+  const subtitleRef = useRef<HTMLElement | null>(null);
+  const titleRef = useRef<HTMLElement | null>(null);
+  const titleCover = useRef<HTMLElement | null>(null);
+  const coverButton = useRef<HTMLDivElement | null>(null);
+  const coverDetailsRef = useRef<HTMLDivElement>(null);
+
+  useFadeInAnimation({
+    ref: subtitleRef,
+    duration: 0.5,
+    ease: customCubic,
+    animationType: "fadeInUp",
+  });
+
+  useFadeInAnimation({
+    ref: titleRef,
+    duration: 0.5,
+    delay: 0.1,
+    ease: customCubic,
+    animationType: "fadeInUp",
+  });
+
+  useFadeInAnimation({
+    ref: titleCover,
+    duration: 0.5,
+    delay: 0.2,
+    ease: customCubic,
+    animationType: "fadeInUp",
+  });
+
+  useFadeInAnimation({
+    ref: coverButton,
+    duration: 0.5,
+    delay: 0.2,
+    ease: customCubic,
+    animationType: "fadeInUp",
+  });
+
+  useFadeInAnimation({
+    ref: coverDetailsRef,
+    duration: 0.5,
+    delay: 0.5,
+  });
+
   return (
     <Section
       customClass={"min-h-[100dvh] py-10 flex flex-col justify-center relative"}
     >
       <div className="py-20 lg:py-0 base-part mb-8 flex-grow flex flex-col lg:flex-row lg:items-center gap-y-4 gap-x-[4rem]">
-        <h1 className={"flex max-w-max flex-col text-md lg:flex-grow"}>
-          <span className="sub-title font-bold">Hello there, I'm</span>
-          <span className="min-w-max title text-[3rem] md:text-[5rem] lg:text-[7rem] font-black">
+        <h1
+          className={"cover-title flex max-w-max flex-col text-md lg:flex-grow"}
+        >
+          <span ref={subtitleRef} className="sub-title font-bold">
+            Hello there, I'm
+          </span>
+          <span
+            ref={titleRef}
+            className="opacity-0 translate-y-[20px] min-w-max title text-[3rem] md:text-[5rem] lg:text-[7rem] font-black"
+          >
             Berny Itoutou
           </span>
-          <span>
+          <span ref={titleCover} className={"opacity-0 translate-y-[20px]"}>
             {" "}
             I'm a <span className="font-bold">Frontend Developer</span> based in
             France.
           </span>
         </h1>
-        <div className="cover-cta flex items-end min-w-[30%]">
+        <div
+          ref={coverButton}
+          className="cover-cta opacity-0 translate-y-[20px]  flex items-end min-w-[30%]"
+        >
           <Button
             theme={"alternative"}
-            customClass={"text-md lg:text-xl px-8 lg:!px-15 lg:!py-4"}
+            customClass={
+              "projects button text-md lg:text-xl px-8 lg:!px-15 lg:!py-4"
+            }
             label={"Explore my work"}
             link={"#projects"}
             target={"_self"}
           />
         </div>
       </div>
-      <div className="infos-part mb-5 lg:mb-0 flex gap-y-8 justify-between flex-wrap">
+      <div
+        ref={coverDetailsRef}
+        className="opacity-0 infos-part mb-5 lg:mb-0 flex gap-y-8 justify-between flex-wrap"
+      >
         <div className="about-me max-w-[400px]">
           <IconTitle customClass={"mb-3"} title={"About Me"} icon={aboutIcon} />
           <p className="text lg:pl-8">
-            I'm a Frontend Developer based in France. I have a serious passion
-            for UI effects, animations and creating intuitive, dynamic user
-            experiences. Let's make something special.
+            I'm a Frontend Developer, specialised in Javascript technologies and
+            living in Bordeaux. I have a serious passion for UI effects,
+            animations and creating intuitive, dynamic user experiences. Let's
+            make something special.
           </p>
         </div>
         <div className="details w-full lg:max-w-max">

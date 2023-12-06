@@ -3,7 +3,9 @@ import { Button } from "../../../../components/Button.tsx";
 import { linkIcon } from "../../../../assets/icon-lib.tsx";
 import profilPic from "../../../../assets/img/profile-pic-berny-itouou.png";
 import profilPicDark from "../../../../assets/img/ellipse-photo-dark.png";
-import "./featured-project.scss";
+import { useRef } from "react";
+import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
+import { customCubic } from "../../../../App.tsx";
 
 interface FeaturedProjectProps {
   data: Project;
@@ -11,8 +13,20 @@ interface FeaturedProjectProps {
 }
 
 export default function FeaturedProject({ data }: FeaturedProjectProps) {
+  const projectBlock = useRef<HTMLDivElement | null>(null);
+
+  useFadeInAnimation({
+    ref: projectBlock,
+    duration: 0.5,
+    triggerScroll: true,
+    ease: customCubic,
+  });
+
   return (
-    <div className="featured-project flex flex-col lg:flex-row lg:nth-child-even:self-end lg:nth-child-even:flex-row-reverse w-full gap-8 lg:max-w-[80%]">
+    <div
+      ref={projectBlock}
+      className="featured-project flex flex-col lg:flex-row lg:nth-child-even:self-end lg:nth-child-even:flex-row-reverse w-full gap-8 lg:max-w-[80%]"
+    >
       <div className={"cover min-w-[50%] relative overflow-hidden rounded-2xl"}>
         <img
           className={

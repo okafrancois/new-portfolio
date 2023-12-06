@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MutableRefObject, Ref } from "react";
 
 interface ButtonProps {
   icon?: React.ReactNode;
@@ -13,6 +13,7 @@ interface ButtonProps {
   customClass?: string;
   link?: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
+  itemRef?: MutableRefObject<HTMLElement | null>;
 }
 
 export function Button({
@@ -26,11 +27,13 @@ export function Button({
   customClass = "",
   link,
   target,
+  itemRef,
 }: ButtonProps) {
   return (
     <>
       {!link && (
         <button
+          ref={itemRef as Ref<HTMLButtonElement>}
           id={id}
           type={type}
           onClick={(e) => onClick?.(e)}
@@ -44,6 +47,7 @@ export function Button({
 
       {link && (
         <a
+          ref={itemRef as Ref<HTMLAnchorElement>}
           target={target ?? "_self"}
           href={link}
           id={id}

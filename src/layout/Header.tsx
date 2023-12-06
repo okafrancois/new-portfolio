@@ -11,13 +11,13 @@ export default function Header() {
     >
       <div className="logo aspect-square flex items-center">{logo}</div>
       <nav className={"hidden sm:flex items-center gap-x-2 "}>
-        <a className={"button alternative"} href="#">
+        <a className={"button alternative"} href="#skills">
           Skills
         </a>
-        <a className={"button alternative"} href="#">
+        <a className={"button alternative"} href="#projects">
           Projects
         </a>
-        <a className={"button alternative"} href="#">
+        <a className={"button alternative"} href="#contact">
           Contact
         </a>
       </nav>
