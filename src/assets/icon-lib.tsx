@@ -1,5 +1,5 @@
 export const gridIcon = (
-  <svg width="20" height="auto" viewBox="0 0 52 71" fill="none">
+  <svg viewBox="0 0 52 71" fill="none">
     <rect width="5" height="60" rx="5" fill="currentColor" />
     <rect x="21" width="5" height="60" rx="5" fill="currentColor" />
     <rect x="42" width="5" height="60" rx="5" fill="currentColor" />
@@ -7,13 +7,7 @@ export const gridIcon = (
 );
 
 export const logo = (
-  <svg
-    width="26"
-    height="20"
-    viewBox="0 0 26 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M0.4 -7.7486e-07H6.8C9.85 -7.7486e-07 13.075 0.824999 13.075 5.4V5.9C13.075 7.675 12.3 8.775 11.175 9.425C12.575 10.1 13.575 11.3 13.575 13.4V13.9C13.575 18.65 10.15 19.5 7 19.5H0.4V-7.7486e-07ZM7.125 11.3H4.45V16H7.125C8.25 16 9.475 15.525 9.475 13.75V13.525C9.475 11.75 8.25 11.3 7.125 11.3ZM6.775 3.5H4.45V7.775H6.775C7.825 7.775 8.975 7.4 8.975 5.8V5.475C8.975 3.875 7.825 3.5 6.775 3.5ZM19.6715 15.325V19.5H15.5215V15.325H19.6715ZM25.9871 -7.7486e-07V19.5H21.9371V-7.7486e-07H25.9871Z"
       fill="currentColor"
@@ -22,13 +16,7 @@ export const logo = (
 );
 
 export const aboutIcon = (
-  <svg
-    width="30"
-    height="30"
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -47,13 +35,7 @@ export const aboutIcon = (
 );
 
 export const infosBubble = (
-  <svg
-    width="30"
-    height="30"
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M14.7375 10.05C14.2581 10.1053 13.8963 10.5112 13.8963 10.9938C13.8963 11.4763 14.2581 11.8822 14.7375 11.9375C14.9894 11.941 15.2318 11.8416 15.4087 11.6623C15.5857 11.483 15.6818 11.2393 15.675 10.9875C15.6683 10.4725 15.2525 10.0567 14.7375 10.05Z"
       fill="currentColor"
@@ -72,13 +54,7 @@ export const infosBubble = (
 );
 
 export const darkModeIcon = (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M22.16 12.0801C22.16 17.6471 17.647 22.1601 12.08 22.1601C6.51297 22.1601 2 17.6471 2 12.0801C2 6.51309 6.51297 2.00012 12.08 2.00012C12.8206 1.9964 13.5591 2.08031 14.28 2.25012C11.4268 3.06703 9.55951 5.79948 9.83498 8.75447C10.1104 11.7095 12.4507 14.0497 15.4057 14.3251C18.3606 14.6006 21.0931 12.7333 21.91 9.88012C22.0798 10.601 22.1637 11.3395 22.16 12.0801Z"
       fill="currentColor"
@@ -87,13 +63,7 @@ export const darkModeIcon = (
 );
 
 export const lightModeIcon = (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M16.75 11.75C16.75 14.5114 14.5114 16.75 11.75 16.75C8.98858 16.75 6.75 14.5114 6.75 11.75C6.75 8.98858 8.98858 6.75 11.75 6.75C14.5114 6.75 16.75 8.98858 16.75 11.75Z"
       fill="currentColor"
@@ -134,13 +104,7 @@ export const lightModeIcon = (
 );
 
 export const linkIcon = (
-  <svg
-    width="21"
-    height="20"
-    viewBox="0 0 21 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -171,13 +135,7 @@ export const linkIcon = (
 );
 
 export const emailIcon = (
-  <svg
-    width="20"
-    height="14"
-    viewBox="0 0 20 14"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M1.5 1.5L9.39255 7.53548C9.75111 7.80967 10.2489 7.80967 10.6075 7.53548L18.5 1.5M2 13H18C18.5523 13 19 12.5523 19 12V2C19 1.44772 18.5523 1 18 1H2C1.44772 1 1 1.44772 1 2V12C1 12.5523 1.44772 13 2 13Z"
       stroke="currentColor"
@@ -187,13 +145,7 @@ export const emailIcon = (
 );
 
 export const twitterIcon = (
-  <svg
-    width="17"
-    height="14"
-    viewBox="0 0 17 14"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -204,13 +156,7 @@ export const twitterIcon = (
 );
 
 export const githubIcon = (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -225,13 +171,7 @@ export const githubIcon = (
 );
 
 export const maltIcon = (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 166 166"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 166 166" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M141.478 23.8555C128.973 11.3891 115.661 19.4691 107.311 27.7801L28.5111 106.58C20.1617 114.929 11.4275 127.627 24.5865 140.747C37.707 153.868 50.3658 145.134 58.7152 136.784L137.515 57.9842C145.865 49.6732 153.945 36.3219 141.478 23.8555ZM66.1797 20.6234L82.8785 37.3223L99.8467 20.3156C101.001 19.1613 102.155 18.084 103.348 17.0836C101.578 8.11856 96.4607 0 82.84 0C69.2193 0 64.102 8.15703 62.3705 17.1221C63.6402 18.2379 64.91 19.3537 66.1797 20.6234ZM99.8467 144.556L82.8785 127.588L66.1797 144.249C64.91 145.518 63.6787 146.711 62.409 147.788C64.3328 156.946 69.7195 165.295 82.84 165.295C95.999 165.295 101.424 156.869 103.31 147.712C102.155 146.711 101.001 145.711 99.8467 144.556ZM59.1 61.0623H26.9336C15.1213 61.0623 0 64.7945 0 82.4168C0 95.6143 8.42637 101.001 17.6223 102.886C18.6996 101.655 59.1 61.0623 59.1 61.0623ZM148.173 61.9473C147.173 63.1016 106.657 103.81 106.657 103.81H138.362C150.174 103.81 165.295 101.001 165.295 82.4168C165.295 68.8346 157.177 63.7172 148.173 61.9473ZM69.6426 50.5197L75.3756 44.7867L58.7152 28.0879C50.3658 19.7385 37.707 11.0043 24.548 24.1633C14.9289 33.7824 17.0836 43.1707 22.1625 50.7506C23.74 50.6352 69.6426 50.5197 69.6426 50.5197ZM96.076 114.352L90.3045 120.124L107.311 137.092C115.661 145.441 128.973 153.521 141.44 141.055C150.751 131.744 148.635 121.932 143.479 114.121C141.825 114.237 96.076 114.352 96.076 114.352Z"
       fill="currentColor"
@@ -240,13 +180,7 @@ export const maltIcon = (
 );
 
 export const linkedInIcon = (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -281,5 +215,14 @@ export const toolIcon = (
         <rect width="68" height="68" fill="currentCOlor" />
       </clipPath>
     </defs>
+  </svg>
+);
+
+export const starIcon = (
+  <svg viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M11.4399 1.53675L12.0999 3.53675C12.3982 4.46244 13.2574 5.09174 14.2299 5.09675H16.3099C17.2854 5.09056 18.1528 5.7164 18.4544 6.64412C18.756 7.57184 18.4226 8.58809 17.6299 9.15675L15.9199 10.3968C15.1328 10.9682 14.802 11.9808 15.0999 12.9068L15.7599 14.9068C16.0864 15.8359 15.7677 16.8692 14.9746 17.4531C14.1816 18.037 13.1002 18.0344 12.3099 17.4468L10.6299 16.1968C9.8424 15.6262 8.77746 15.6262 7.98993 16.1968L6.30993 17.4468C5.52407 18.0219 4.45662 18.0235 3.66913 17.4505C2.88163 16.8776 2.55454 15.8615 2.85993 14.9368L3.51993 12.9368C3.81789 12.0108 3.48709 10.9982 2.69993 10.4268L0.949928 9.16675C0.141226 8.59692 -0.197894 7.56405 0.115641 6.62575C0.429177 5.68745 1.32111 5.06595 2.30993 5.09675H4.38993C5.35713 5.09459 6.21473 4.47454 6.51993 3.55675L7.17993 1.55675C7.4758 0.632962 8.33266 0.00457893 9.30267 2.49081e-05C10.2727 -0.00452912 11.1354 0.615781 11.4399 1.53675Z"
+      fill="currentColor"
+    />
   </svg>
 );

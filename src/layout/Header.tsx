@@ -3,25 +3,31 @@ import profilPic from "../assets/img/profile-pic-berny-itouou.png";
 import profilPicDark from "../assets/img/ellipse-photo-dark.png";
 import DarkModeSwitcher from "../components/DarkModeSwitcher.tsx";
 import { Button } from "../components/Button.tsx";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../components/LanguageSwitcher.tsx";
 
 export default function Header() {
+  const { t } = useTranslation();
   return (
     <header
       className={"c-container py-4 flex justify-between fixed z-50 top-0"}
     >
-      <div className="logo aspect-square flex items-center">{logo}</div>
+      <div className="logo aspect-square flex items-center">
+        <span className={"icon"}>{logo}</span>
+      </div>
       <nav className={"hidden sm:flex items-center gap-x-2 "}>
         <a className={"button alternative"} href="#skills">
-          Skills
+          {t("common:navigation.skills")}
         </a>
         <a className={"button alternative"} href="#projects">
-          Projects
+          {t("common:navigation.projects")}
         </a>
         <a className={"button alternative"} href="#contact">
-          Contact
+          {t("common:navigation.contact")}
         </a>
       </nav>
       <div className="cta-button flex gap-x-3">
+        <LanguageSwitcher />
         <DarkModeSwitcher />
         <Button
           icon={
@@ -39,7 +45,7 @@ export default function Header() {
             </>
           }
           customClass={"pl-2"}
-          label={"Contact Me"}
+          label={t("common:actions.contact")}
           link={"mailto:itoutouberny@gmail.com"}
         />
       </div>

@@ -1,0 +1,29 @@
+{
+  "navigation": {
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "actions": {
+    "contact": "Me contacter",
+    "exploreWork": "Découvrir mes travaux",
+    "seeWebsite": "Voir le site web"
+  },
+  "labels": {
+    "coverQuote": "Je suis un développeur web, spécialisé dans les technologies Javascript habitant à Bordeaux. J'ai une passion pour les effets UI, les animations et la création d'expériences utilisateur intuitives et dynamiques. Je vous aide à faire décoller votre projet.",
+    "aboutMe": "À propos de moi",
+    "quickResume": "Résumé rapide",
+    "aboutMySkills": "Mes compétences",
+    "fontEndDev": "Développement Front-end",
+    "backEndDev": "Développement Back-end",
+    "others": "Autres",
+    "projectSelection": "Sélection de projets",
+    "letGetInTouch": "Restons en contact",
+    "contactQuote": "J'étais un amoureux des belles interfaces web bien avant de commencer le développement. C'est cet amour qui m'a ammené à me diriger vers le front-end et c'est avec cette même passion que je serai heureux de réaliser votre projet. Alors n'hésitez pas à me contacter sur le réseau de votre choix pour discuter de votre projet et le faire décoller !",
+    "reachMeOn": "Retrouvez moi sur :",
+    "title1": "Hello ! Je suis",
+    "title2": "Berny Itoutou",
+    "role": "Développeur Web",
+    "title3": " basé en France."
+  }
+}

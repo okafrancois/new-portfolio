@@ -7,8 +7,10 @@ import FeaturedProject from "./FeaturedProject.tsx";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
 import { customCubic } from "../../../../App.tsx";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectsSection() {
+  const { t } = useTranslation();
   const sectionTitle = useRef<HTMLHeadingElement | null>(null);
 
   useFadeInAnimation({
@@ -26,7 +28,7 @@ export default function ProjectsSection() {
       <IconTitle
         itemRef={sectionTitle}
         customClass={"!mb-15 text-xl"}
-        title={"Project selection"}
+        title={t("common:labels.projectSelection")}
         icon={lightModeIcon}
       />
 
@@ -46,7 +48,7 @@ const projects: Project[] = [
     enterprise: "Codelitt",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    image: "https://picsum.photos/400/600",
+    image: "/img.png",
     link: "https://www.google.com",
     technologies: [
       {

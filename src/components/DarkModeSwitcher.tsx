@@ -8,10 +8,10 @@ export default function DarkModeSwitcher() {
 
   return (
     <button onClick={() => toggleDarkMode()}>
-      <span className={"dark:text-alternative dark:hidden"}>
+      <span className={"dark:text-alternative dark:hidden icon"}>
         {darkModeIcon}
       </span>
-      <span className={"hidden dark:inline dark:text-alternative"}>
+      <span className={"hidden dark:inline-flex dark:text-alternative icon"}>
         {lightModeIcon}
       </span>
     </button>

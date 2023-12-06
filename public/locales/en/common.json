@@ -1,0 +1,29 @@
+{
+  "navigation": {
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "actions": {
+    "contact": "Contact me",
+    "exploreWork": "Explore my work",
+    "seeWebsite": "See the website"
+  },
+  "labels": {
+    "coverQuote": "I'm a Web Developer, specialised in Javascript technologies living in Bordeaux. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.",
+    "aboutMe": "About me",
+    "quickResume": "Quick resume",
+    "aboutMySkills": "About my skills",
+    "fontEndDev": "Frontend Development",
+    "backEndDev": "Backend Development",
+    "others": "Others",
+    "projectSelection": "Project selection",
+    "letGetInTouch": "Let's get in touch",
+    "contactQuote": "I was a lover of beautiful web interfaces long before I started dev. It was this love that led me to front-end development and and it's with that same passion that I'll be happy to make your your project. So don't hesitate to contact me on the network of your choice to discuss your project!",
+    "reachMeOn": "Find me on :",
+    "title1": "Hello there ! I'm",
+    "title2": "Berny Itoutou",
+    "role": "Web Developer",
+    "title3": " based in France."
+  }
+}

@@ -2,11 +2,21 @@ import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { gridIcon } from "../assets/icon-lib.tsx";
 
+interface Breakpoints {
+  [key: string]: number;
+
+  sm: number;
+  md: number;
+  lg: number;
+  wd: number;
+  xw: number;
+}
+
 export default function GridOverlay() {
   const [visible, setVisible] = useState(false);
   const [breakpoint, setBreakpoint] = useState("");
 
-  const breakpoints = {
+  const breakpoints: Breakpoints = {
     sm: 640,
     md: 768,
     lg: 1024,
@@ -19,7 +29,8 @@ export default function GridOverlay() {
     const currentBreakpoint =
       Object.keys(breakpoints)
         .reverse()
-        .find((key) => width >= breakpoints[key]) ?? "sm";
+        .find((key: keyof typeof breakpoints) => width >= breakpoints[key]) ??
+      "sm";
     setBreakpoint(currentBreakpoint);
   };
 
@@ -43,7 +54,7 @@ export default function GridOverlay() {
         className={"fixed bottom-4 z-50 left-4 dark:text-alternative"}
         onClick={toggleGrid}
       >
-        {gridIcon}
+        <span className={"icon"}>{gridIcon}</span>
       </button>
       <span
         className={

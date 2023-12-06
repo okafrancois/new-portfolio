@@ -10,6 +10,16 @@
     min-height: 100vh;
   }
 
+  svg, image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .icon {
+    @apply w-6 h-6 inline-flex aspect-square
+  }
+
   .c-container {
     @apply w-full px-margin-sm md:px-margin-md lg:px-margin-lg wd:px-margin-wd;
   }

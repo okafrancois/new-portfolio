@@ -39,7 +39,7 @@ export function Button({
           onClick={(e) => onClick?.(e)}
           className={`${baseClass} ${theme} flex items-center gap-x-2 ${customClass}`}
         >
-          {icon && <span className={"w-6 h-6 aspect-square"}>{icon}</span>}
+          {icon && <span className={"icon"}>{icon}</span>}
 
           <span>{label}</span>
         </button>

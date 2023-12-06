@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
 import { customCubic } from "../../../../App.tsx";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -134,6 +135,7 @@ interface SkillSection {
 }
 
 export default function SkillsSection() {
+  const { t } = useTranslation();
   const titleRef = useRef<HTMLHeadingElement | null>(null);
 
   useFadeInAnimation({
@@ -148,7 +150,7 @@ export default function SkillsSection() {
       <IconTitle
         itemRef={titleRef}
         customClass={"!mb-15 text-xl"}
-        title={"About my skills"}
+        title={t("common:labels.aboutMySkills")}
         icon={toolIcon}
       />
 

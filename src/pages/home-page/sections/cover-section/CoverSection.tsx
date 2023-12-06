@@ -5,8 +5,10 @@ import { Button } from "../../../../components/Button.tsx";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
 import { customCubic } from "../../../../App.tsx";
+import { useTranslation } from "react-i18next";
 
 export default function CoverSection() {
+  const { t } = useTranslation();
   const subtitleRef = useRef<HTMLElement | null>(null);
   const titleRef = useRef<HTMLElement | null>(null);
   const titleCover = useRef<HTMLElement | null>(null);
@@ -59,18 +61,17 @@ export default function CoverSection() {
           className={"cover-title flex max-w-max flex-col text-md lg:flex-grow"}
         >
           <span ref={subtitleRef} className="sub-title font-bold">
-            Hello there, I'm
+            {t("common:labels.title1")}
           </span>
           <span
             ref={titleRef}
             className="opacity-0 translate-y-[20px] min-w-max title text-[3rem] md:text-[5rem] lg:text-[7rem] font-black"
           >
-            Berny Itoutou
+            {t("common:labels.title2")}
           </span>
           <span ref={titleCover} className={"opacity-0 translate-y-[20px]"}>
-            {" "}
-            I'm a <span className="font-bold">Frontend Developer</span> based in
-            France.
+            <span className="font-bold">{t("common:labels.role")}</span>{" "}
+            {t("common:labels.title3")}
           </span>
         </h1>
         <div
@@ -82,7 +83,7 @@ export default function CoverSection() {
             customClass={
               "projects button text-md lg:text-xl px-8 lg:!px-15 lg:!py-4"
             }
-            label={"Explore my work"}
+            label={t("common:actions.exploreWork")}
             link={"#projects"}
             target={"_self"}
           />
@@ -93,18 +94,17 @@ export default function CoverSection() {
         className="opacity-0 infos-part mb-5 lg:mb-0 flex gap-y-8 justify-between flex-wrap"
       >
         <div className="about-me max-w-[400px]">
-          <IconTitle customClass={"mb-3"} title={"About Me"} icon={aboutIcon} />
-          <p className="text lg:pl-8">
-            I'm a Frontend Developer, specialised in Javascript technologies and
-            living in Bordeaux. I have a serious passion for UI effects,
-            animations and creating intuitive, dynamic user experiences. Let's
-            make something special.
-          </p>
+          <IconTitle
+            customClass={"mb-3"}
+            title={t("common:labels.aboutMe")}
+            icon={aboutIcon}
+          />
+          <p className="text lg:pl-8">{t("common:labels.coverQuote")}</p>
         </div>
         <div className="details w-full lg:max-w-max">
           <IconTitle
             customClass={"mb-3"}
-            title={"Quick resume"}
+            title={t("common:labels.quickResume")}
             icon={infosBubble}
           />
           <div className="lg:pl-8 details-rows flex flex-col gap-y-2">
