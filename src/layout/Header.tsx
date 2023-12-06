@@ -1,4 +1,4 @@
-import { logo } from "../assets/icon-lib.tsx";
+import { logoIcon } from "../assets/icon-lib.tsx";
 import profilPic from "../assets/img/profile-pic-berny-itouou.png";
 import profilPicDark from "../assets/img/ellipse-photo-dark.png";
 import DarkModeSwitcher from "../components/DarkModeSwitcher.tsx";
@@ -13,7 +13,7 @@ export default function Header() {
       className={"c-container py-4 flex justify-between fixed z-50 top-0"}
     >
       <div className="logo aspect-square flex items-center">
-        <span className={"icon"}>{logo}</span>
+        <span className={"icon"}>{logoIcon}</span>
       </div>
       <nav className={"hidden sm:flex items-center gap-x-2 "}>
         <a className={"button alternative"} href="#skills">

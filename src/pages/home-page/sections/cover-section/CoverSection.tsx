@@ -1,5 +1,5 @@
 import IconTitle from "../../../../components/IconTitle.tsx";
-import { aboutIcon, infosBubble } from "../../../../assets/icon-lib.tsx";
+import { aboutIcon, infosBubbleIcon } from "../../../../assets/icon-lib.tsx";
 import Section from "../../../../layout/Section.tsx";
 import { Button } from "../../../../components/Button.tsx";
 import { useRef } from "react";
@@ -105,7 +105,7 @@ export default function CoverSection() {
           <IconTitle
             customClass={"mb-3"}
             title={t("common:labels.quickResume")}
-            icon={infosBubble}
+            icon={infosBubbleIcon}
           />
           <div className="lg:pl-8 details-rows flex flex-col gap-y-2">
             <ul className={"details-items flex flex-wrap gap-2"}>

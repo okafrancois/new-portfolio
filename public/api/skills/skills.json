@@ -1,0 +1,114 @@
+[
+  {
+    "id": "01FG1WY863HXDVRM48TE1V98Q8",
+    "title": {
+      "en": "Frontend Development",
+      "fr": "Développement Front-end"
+    },
+    "skills": [
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98Q9",
+        "name": "HTML",
+        "icon": "html"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98Q9",
+        "name": "CSS",
+        "icon": "css"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QB",
+        "name": "JavaScript",
+        "icon": "javascript"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QC",
+        "name": "Typescript",
+        "icon": "typescript"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QD",
+        "name": "ReactJS",
+        "icon": "react"
+      },
+      {
+        "id": "01FG1WY863HX2VRM48TE1V98QD",
+        "name": "Redux toolkit",
+        "icon": "redux"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QE",
+        "name": "Tailwind CSS",
+        "icon": "tailwind"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QF",
+        "name": "Sass",
+        "icon": "sass"
+      },
+      {
+        "id": "01FG1WY863H2DVRM48TE1V98QG",
+        "name": "Webflow",
+        "icon": "webflow"
+      }
+    ]
+  },
+  {
+    "id": "01FG1WY863HXDVRM48TE1V98QG",
+    "title": {
+      "en": "Backend Development",
+      "fr": "Développement Back-end"
+    },
+    "skills": [
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QH",
+        "name": "MongoDB",
+        "icon": "mongodb"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QI",
+        "name": "Express Js",
+        "icon": "expressjs"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QJ",
+        "name": "Strapi",
+        "icon": "strapi"
+      }
+    ]
+  },
+  {
+    "id": "01FG1WY863HXDVRM48TE1V98QZ",
+    "title": {
+      "en": "Others",
+      "fr": "Autres"
+    },
+    "skills": [
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QN",
+        "name": "Wordpress",
+        "icon": "wordpress"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QM",
+        "name": "Figma",
+        "icon": "figma"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QO",
+        "name": "Git",
+        "icon": "git"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QP",
+        "name": "Github Actions",
+        "icon": "github-actions"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QQ",
+        "name": "Docker",
+        "icon": "docker"
+      }
+    ]
+  }
+]

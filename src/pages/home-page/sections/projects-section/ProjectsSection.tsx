@@ -1,7 +1,7 @@
 import { ulid } from "ulid";
 import { Project } from "./types.tsx";
 import IconTitle from "../../../../components/IconTitle.tsx";
-import { lightModeIcon } from "../../../../assets/icon-lib.tsx";
+import { starIcon } from "../../../../assets/icon-lib.tsx";
 import Section from "../../../../layout/Section.tsx";
 import FeaturedProject from "./FeaturedProject.tsx";
 import { useRef } from "react";
@@ -29,7 +29,7 @@ export default function ProjectsSection() {
         itemRef={sectionTitle}
         customClass={"!mb-15 text-xl"}
         title={t("common:labels.projectSelection")}
-        icon={lightModeIcon}
+        icon={starIcon}
       />
 
       <div className="flex flex-col gap-16 lg:gap-0">

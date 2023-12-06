@@ -1,0 +1,101 @@
+[
+  {
+    "id": "01FG1WY863HXDVRM48TE1V98Q8",
+    "title": {
+      "en": "Frontend Development",
+      "fr": "Développement Front-end"
+    },
+    "skills": [
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98Q9",
+        "name": "HTML/CSS",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QB",
+        "name": "JavaScript",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QC",
+        "name": "Typescript",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QD",
+        "name": "ReactJS",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QD",
+        "name": "Redux toolkit",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QE",
+        "name": "Tailwind CSS",
+        "icon": "darkModeIcon"
+      }
+    ]
+  },
+  {
+    "id": "01FG1WY863HXDVRM48TE1V98QG",
+    "title": {
+      "en": "Backend Development",
+      "fr": "Développement Back-end"
+    },
+    "skills": [
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QH",
+        "name": "MongoDB",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QI",
+        "name": "Express.js",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QJ",
+        "name": "Strapi",
+        "icon": "darkModeIcon"
+      }
+    ]
+  },
+  {
+    "id": "01FG1WY863HXDVRM48TE1V98QM",
+    "title": "Others",
+    "skills": [
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QN",
+        "name": "Figma",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QO",
+        "name": "Git",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QP",
+        "name": "Github Actions",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QQ",
+        "name": "Docker",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QS",
+        "name": "Canva",
+        "icon": "darkModeIcon"
+      },
+      {
+        "id": "01FG1WY863HXDVRM48TE1V98QV",
+        "name": "Axios",
+        "icon": "darkModeIcon"
+      }
+    ]
+  }
+]
