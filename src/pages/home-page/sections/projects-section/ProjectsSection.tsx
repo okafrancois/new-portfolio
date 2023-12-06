@@ -48,7 +48,7 @@ const projects: Project[] = [
     enterprise: "Codelitt",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    image: "/img.png",
+    image: "https://picsum.photos/400/600",
     link: "https://www.google.com",
     technologies: [
       {
