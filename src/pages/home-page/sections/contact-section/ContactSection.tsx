@@ -97,14 +97,15 @@ export default function ContactSection() {
           }
         >
           {contacts.map((item) => (
-            <Button
-              theme={"alternative"}
-              key={item.id}
-              link={item.link}
-              icon={item.icon}
-              label={item.label}
-              target={"_blank"}
-            />
+            <li key={item.id} className={"inline"}>
+              <Button
+                theme={"alternative"}
+                link={item.link}
+                icon={item.icon}
+                label={item.label}
+                target={"_blank"}
+              />
+            </li>
           ))}
         </ul>
       </div>
