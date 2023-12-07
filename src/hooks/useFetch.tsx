@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
 export default function useFetch(url: string): {
-  data: never;
+  data: object | object[] | null;
   isPending: boolean;
   error: string | null;
 } {
-  const [data, setData] = useState<never | null>(null);
+  const [data, setData] = useState<object | object[] | null>(null);
   const [isPending, setIsPending] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 

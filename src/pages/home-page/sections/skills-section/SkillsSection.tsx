@@ -45,7 +45,7 @@ export default function SkillsSection() {
 
   useEffect(() => {
     if (data) {
-      setSkills(data);
+      setSkills(data as SkillSection[]);
     }
   }, [data]);
 
@@ -114,7 +114,7 @@ function Skill({ name, icon }: Skill) {
       }
     >
       <span className={"w-6 h-6 aspect-square"}>
-        {getSkillIcon(icon as keyof SkillIcon)}
+        {getSkillIcon(icon as keyof typeof SkillIcon)}
       </span>
       <span>{name}</span>
     </li>

@@ -585,7 +585,7 @@ export enum SkillIcon {
   "github-actions",
 }
 
-export function getSkillIcon(name: keyof SkillIcon) {
+export function getSkillIcon(name: keyof typeof SkillIcon) {
   switch (name) {
     case "react":
       return reactIcon;
