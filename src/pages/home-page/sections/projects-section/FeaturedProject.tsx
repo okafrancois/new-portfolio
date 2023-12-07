@@ -6,6 +6,8 @@ import profilPicDark from "../../../../assets/img/ellipse-photo-dark.png";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
 import { customCubic } from "../../../../App.tsx";
+import i18n from "i18next";
+import { useTranslation } from "react-i18next";
 
 interface FeaturedProjectProps {
   data: Project;
@@ -13,6 +15,8 @@ interface FeaturedProjectProps {
 }
 
 export default function FeaturedProject({ data }: FeaturedProjectProps) {
+  const currentLanguage = i18n.language;
+  const { t } = useTranslation();
   const projectBlock = useRef<HTMLDivElement | null>(null);
 
   useFadeInAnimation({
@@ -29,15 +33,13 @@ export default function FeaturedProject({ data }: FeaturedProjectProps) {
     >
       <div className={"cover min-w-[50%] relative overflow-hidden rounded-2xl"}>
         <img
-          className={
-            "w-full aspect-[300/200] lg:aspect-[532/630] h-auto object-cover"
-          }
+          className={"w-full aspect-[300/200] h-auto object-cover"}
           src={data.image}
           alt={"project cover for " + data.enterprise}
         />
       </div>
       <div className={"details flex flex-col items-start justify-center"}>
-        <h3 className="role flex gap-x-2 mb-2">
+        <h3 className="role flex gap-x-2 mb-2 min-w-max">
           <span className={"button post pl-2 primary gap-x-2"}>
             <span>
               <img
@@ -51,10 +53,10 @@ export default function FeaturedProject({ data }: FeaturedProjectProps) {
                 alt="A photo of berny itoutou"
               />
             </span>{" "}
-            as {data.role}
+            {data.role[currentLanguage]}
           </span>
           <span className={"button enterprise alternative border-dashed"}>
-            at {data.enterprise}
+            {data.enterprise}
           </span>
         </h3>
         <ul className={"techs flex gap-x-2 mb-4"}>
@@ -62,8 +64,14 @@ export default function FeaturedProject({ data }: FeaturedProjectProps) {
             <li key={item.id}>#{item.name}</li>
           ))}
         </ul>
-        <p className={"description mb-4 max-w-[450px]"}>{data.description}</p>
-        <Button icon={linkIcon} label={"See the website"} link={data.link} />
+        <p className={"description mb-4 max-w-[450px]"}>
+          {data.description[currentLanguage]}
+        </p>
+        <Button
+          icon={linkIcon}
+          label={t("common:actions.seeWebsite")}
+          link={data.link}
+        />
       </div>
     </div>
   );

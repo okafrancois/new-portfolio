@@ -1,7 +1,6 @@
 import {
   getSkillIcon,
   SkillIcon,
-  skillIcons,
   toolIcon,
 } from "../../../../assets/icon-lib.tsx";
 import { useEffect, useRef, useState } from "react";
@@ -90,7 +89,7 @@ function SkillsBlock({ data, index = 0 }: SkillsBlockTypes) {
   return (
     <div ref={sectionRef} className="skill">
       <h4 className="button lg:w-full primary skill-title mb-4">
-        {data.title[currentLang || "en"]}
+        {data.title[currentLang ?? "en"]}
       </h4>
 
       <ul className="skill-list flex flex-wrap gap-4">

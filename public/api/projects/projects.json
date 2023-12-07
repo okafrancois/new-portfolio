@@ -1,0 +1,110 @@
+[
+  {
+    "id": "01FJ3JFMX7E8ASN30XFMC8AQCW",
+    "role": {
+      "en": "ReactJS Developer ",
+      "fr": "Développeur Frontend React JS"
+    },
+    "enterprise": "Alvo (Freelance - @CosaVostra)",
+    "description": {
+      "fr": "La Suite Pro d'Alvo est un outil SaaS complet conçu pour les professionnels de la transmission et les experts-comptables.",
+      "en": "Alvo's Pro Suite is a complete SaaS tool designed for transmission professionals and accountants."
+    },
+    "image": "/api/projects/portfolio-alvo-1.jpg",
+    "link": "https://www.alvo.market/suite-pro-alvo/outil-de-gestion-et-production",
+    "technologies": [
+      {
+        "id": "01FJXJFMX7E8AS130XFAP8AQCX",
+        "name": "ReactJS"
+      },
+      {
+        "id": "01FJ3JFMX7E8AS1K0XFA28AQCY",
+        "name": "TailwindCSS"
+      },
+      {
+        "id": "01FJ3JFMX7E8AS930RFAC8AQCZ",
+        "name": "Typescript"
+      },
+      {
+        "id": "01FJ3JFMX7E8AS150XFSC8AQD0",
+        "name": "Redux"
+      },
+      {
+        "id": "01FJ3JFMX7E8AS100XFAC8AQD1",
+        "name": "Axios"
+      }
+    ]
+  },
+  {
+    "id": "01FJ3JFMX7E8AS130XLAC8AQD2",
+    "role": {
+      "en": "Frontend Developer",
+      "fr": "Développeur Frontend"
+    },
+    "enterprise": "Sowen (@CosaVostra)",
+    "description": {
+      "fr": "Un site vitrine efficace et marquant pour présenter la vision de l'entreprise et ses réalisations.",
+      "en": "An effective and striking showcase site to present the company's vision and achievements."
+    },
+    "image": "/api/projects/portfolio-sowen-1.jpg",
+    "link": "https://www.alvo.market/suite-pro-alvo/outil-de-gestion-et-production",
+    "technologies": [
+      {
+        "id": "01FJ3JFMX7E8AS130JFAC8AQD3",
+        "name": "ReactJS"
+      },
+      {
+        "id": "01FJ3JFMX7E8AS130RFAC8AQD4",
+        "name": "TailwindCSS"
+      },
+      {
+        "id": "01FJ3JFMX7E8AS130XCAC8AQD5",
+        "name": "Typescript"
+      },
+      {
+        "id": "01FJ3JFMX7E8AS130XFZC8AQD6",
+        "name": "Redux"
+      },
+      {
+        "id": "01FJ3JFMX7E6AS130XFAC8AQD7",
+        "name": "Axios"
+      }
+    ]
+  },
+  {
+    "id": "01FJ3JRMX7E8AS130XFAC8AQD8",
+    "role": {
+      "en": "Frontend Developer",
+      "fr": "Développeur Frontend"
+    },
+    "enterprise": "Futuribles (@CosaVostra)",
+    "description": {
+      "fr": "Un site moderne et efficace pour la consommation du contenu média.",
+      "en": "A modern and efficient site for consuming media content."
+    },
+    "image": "/api/projects/portfolio-futuribles-1.jpg",
+    "link": "https://www.alvo.market/suite-pro-alvo/outil-de-gestion-et-production",
+    "technologies": [
+      {
+        "id": "01FJ3JFMX7E8AS230XFAC8AQD9",
+        "name": "ReactJS"
+      },
+      {
+        "id": "01FJ3JFMX7E8AS230XFAC8AQDA",
+        "name": "TailwindCSS"
+      },
+      {
+        "id": "01FJ3JFMX7E8AS930XFAC8AQDB",
+        "name": "Typescript"
+      },
+      {
+        "id": "01FJ3JFMX7E8AS330XFAC8AQDC",
+        "name": "Redux"
+      },
+      {
+        "id": "01FJ3JFMZ7E8AS130XFAC8AQDD",
+        "name": "Axios"
+      }
+    ]
+  }
+]

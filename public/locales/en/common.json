@@ -25,5 +25,12 @@
     "title2": "Berny Itoutou",
     "role": "Web Developer",
     "title3": " based in France."
+  },
+  "resume": {
+    "role": "Web Developer",
+    "speciality": "Specialised in Javascript",
+    "experience": "3+ years of experience",
+    "contract": "Freelance",
+    "location": "Remote | Hybrid"
   }
 }

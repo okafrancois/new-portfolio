@@ -58,7 +58,7 @@
     }
 
     &.alternative {
-      @apply bg-transparent text-primary border border-primary dark:text-alternative dark:border-alternative;
+      @apply bg-white text-primary border border-primary dark:text-alternative dark:bg-primary dark:border-alternative;
 
       &:hover {
         @apply bg-primary text-white dark:bg-alternative dark:text-primary;

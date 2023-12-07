@@ -1,11 +1,18 @@
-import { Skill } from "../skills-section/SkillsSection.tsx";
-
 export interface Project {
   id: string;
-  role: string;
+  role: {
+    en: string;
+    fr: string;
+  };
   enterprise: string;
-  description: string;
+  description: {
+    en: string;
+    fr: string;
+  };
   image: string;
   link: string;
-  technologies: Skill[];
+  technologies: {
+    id: string;
+    name: string;
+  }[];
 }

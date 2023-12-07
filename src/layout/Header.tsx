@@ -13,18 +13,38 @@ export default function Header() {
       className={"c-container py-4 flex justify-between fixed z-50 top-0"}
     >
       <div className="logo aspect-square flex items-center">
-        <span className={"icon"}>{logoIcon}</span>
+        <button
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+          className={"icon"}
+        >
+          {logoIcon}
+        </button>
       </div>
-      <nav className={"hidden sm:flex items-center gap-x-2 "}>
-        <a className={"button alternative"} href="#skills">
-          {t("common:navigation.skills")}
-        </a>
-        <a className={"button alternative"} href="#projects">
-          {t("common:navigation.projects")}
-        </a>
-        <a className={"button alternative"} href="#contact">
-          {t("common:navigation.contact")}
-        </a>
+      <nav
+        className={
+          "hidden c-container -z-10 absolute h-full left-0 top-0 w-full sm:flex justify-center items-center gap-x-2 flex-grow"
+        }
+      >
+        <Button
+          theme={"alternative"}
+          label={t("common:navigation.skills")}
+          link={"#skills"}
+        />
+        <Button
+          theme={"alternative"}
+          label={t("common:navigation.projects")}
+          link={"#projects"}
+        />
+        <Button
+          theme={"alternative"}
+          label={t("common:navigation.contact")}
+          link={"#contact"}
+        />
       </nav>
       <div className="cta-button flex gap-x-3">
         <LanguageSwitcher />

@@ -1,17 +1,20 @@
-import { ulid } from "ulid";
-import { Project } from "./types.tsx";
 import IconTitle from "../../../../components/IconTitle.tsx";
 import { starIcon } from "../../../../assets/icon-lib.tsx";
 import Section from "../../../../layout/Section.tsx";
 import FeaturedProject from "./FeaturedProject.tsx";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
 import { customCubic } from "../../../../App.tsx";
 import { useTranslation } from "react-i18next";
+import useFetch from "../../../../hooks/useFetch.tsx";
+import { Project } from "./types.tsx";
 
 export default function ProjectsSection() {
   const { t } = useTranslation();
   const sectionTitle = useRef<HTMLHeadingElement | null>(null);
+  const { data } = useFetch("/api/projects/projects.json");
+
+  const [projects, setProjects] = useState<Project[]>([]);
 
   useFadeInAnimation({
     ref: sectionTitle,
@@ -19,6 +22,12 @@ export default function ProjectsSection() {
     triggerScroll: true,
     ease: customCubic,
   });
+
+  useEffect(() => {
+    if (data) {
+      setProjects(data);
+    }
+  }, [data]);
 
   return (
     <Section
@@ -32,7 +41,7 @@ export default function ProjectsSection() {
         icon={starIcon}
       />
 
-      <div className="flex flex-col gap-16 lg:gap-0">
+      <div className="flex flex-col gap-20">
         {projects.map((project, index) => (
           <FeaturedProject data={project} key={project.id} index={index} />
         ))}
@@ -40,110 +49,3 @@ export default function ProjectsSection() {
     </Section>
   );
 }
-
-const projects: Project[] = [
-  {
-    id: ulid(),
-    role: "Frontend Developer",
-    enterprise: "Codelitt",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    image: "https://picsum.photos/400/600",
-    link: "https://www.google.com",
-    technologies: [
-      {
-        id: ulid(),
-        name: "React",
-        icon: "icon",
-      },
-      {
-        id: ulid(),
-        name: "React",
-        icon: "icon",
-      },
-      {
-        id: ulid(),
-        name: "React",
-        icon: "icon",
-      },
-    ],
-  },
-  {
-    id: ulid(),
-    role: "Backend Developer",
-    enterprise: "Initech",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    image: "https://picsum.photos/400/600",
-    link: "https://www.example.com",
-    technologies: [
-      {
-        id: ulid(),
-        name: "Node.js",
-        icon: "icon",
-      },
-      {
-        id: ulid(),
-        name: "Express.js",
-        icon: "icon",
-      },
-      {
-        id: ulid(),
-        name: "MongoDB",
-        icon: "icon",
-      },
-    ],
-  },
-  {
-    id: ulid(),
-    role: "Full stack developer",
-    enterprise: "Hooli",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    image: "https://picsum.photos/400/600",
-    link: "https://www.example.net",
-    technologies: [
-      {
-        id: ulid(),
-        name: "React",
-        icon: "icon",
-      },
-      {
-        id: ulid(),
-        name: "Node.js",
-        icon: "icon",
-      },
-      {
-        id: ulid(),
-        name: "MongoDB",
-        icon: "icon",
-      },
-    ],
-  },
-  {
-    id: ulid(),
-    role: "Data analyst",
-    enterprise: "Pied Piper",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    image: "https://picsum.photos/400/600",
-    link: "https://www.example.org",
-    technologies: [
-      {
-        id: ulid(),
-        name: "Python",
-        icon: "icon",
-      },
-      {
-        id: ulid(),
-        name: "Pandas",
-        icon: "icon",
-      },
-      {
-        id: ulid(),
-        name: "R",
-        icon: "icon",
-      },
-    ],
-  },
-];

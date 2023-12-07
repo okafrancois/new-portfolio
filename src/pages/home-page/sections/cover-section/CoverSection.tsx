@@ -7,6 +7,23 @@ import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
 import { customCubic } from "../../../../App.tsx";
 import { useTranslation } from "react-i18next";
 
+const projects = [
+  {
+    id: "sowen-group",
+    title: "sowen-group.fr",
+    link: "https://sowen-group.fr",
+  },
+  {
+    id: "alvo-market",
+    title: "alvo.market",
+    link: "https://alvo.market",
+  },
+  {
+    id: "futuribles",
+    title: "futuribles.fr",
+    link: "https://futuribles.fr",
+  },
+];
 export default function CoverSection() {
   const { t } = useTranslation();
   const subtitleRef = useRef<HTMLElement | null>(null);
@@ -54,7 +71,7 @@ export default function CoverSection() {
 
   return (
     <Section
-      customClass={"min-h-[100dvh] py-10 flex flex-col justify-center relative"}
+      customClass={"min-h-[100vh] py-10 flex flex-col justify-center relative"}
     >
       <div className="py-20 lg:py-0 base-part mb-8 flex-grow flex flex-col lg:flex-row lg:items-center gap-y-4 gap-x-[4rem]">
         <h1
@@ -81,7 +98,7 @@ export default function CoverSection() {
           <Button
             theme={"alternative"}
             customClass={
-              "projects button text-md lg:text-xl px-8 lg:!px-15 lg:!py-4"
+              "projects lg:translate-y-10 button text-md lg:text-xl px-8 lg:!px-15 lg:!py-4"
             }
             label={t("common:actions.exploreWork")}
             link={"#projects"}
@@ -115,7 +132,7 @@ export default function CoverSection() {
                     "bubble-item min-w-max primary opacity-70 pointer-events-none"
                   }
                 >
-                  Frontend Developer
+                  {t("common:resume.role")}
                 </p>
               </li>
               <li>
@@ -124,7 +141,7 @@ export default function CoverSection() {
                     "bubble-item min-w-max primary opacity-70 pointer-events-none"
                   }
                 >
-                  Specialised in Javascript
+                  {t("common:resume.speciality")}
                 </p>
               </li>
             </ul>
@@ -135,7 +152,7 @@ export default function CoverSection() {
                     "bubble-item min-w-max alternative border-dashed opacity-50 pointer-events-none"
                   }
                 >
-                  3+ years of experience
+                  {t("common:resume.experience")}
                 </p>
               </li>
 
@@ -145,7 +162,7 @@ export default function CoverSection() {
                     "bubble-item min-w-max alternative border-dashed opacity-50 pointer-events-none"
                   }
                 >
-                  Freelance
+                  {t("common:resume.contract")}
                 </p>
               </li>
               <li>
@@ -154,35 +171,21 @@ export default function CoverSection() {
                     "bubble-item min-w-max alternative border-dashed opacity-50 pointer-events-none"
                   }
                 >
-                  Remote / Hybride
+                  {t("common:resume.location")}
                 </p>
               </li>
             </ul>
             <ul className={"details-items flex flex-wrap gap-2"}>
-              <li>
-                <a
-                  href={"https://sowen-group.fr"}
-                  className={"bubble-item min-w-max alternative"}
-                >
-                  sowen-group.fr
-                </a>
-              </li>
-              <li>
-                <a
-                  href={"https://alvo.market"}
-                  className={"bubble-item min-w-max alternative"}
-                >
-                  alvo.market
-                </a>
-              </li>
-              <li className={"hidden md:block"}>
-                <a
-                  href={"https://futuribles.fr"}
-                  className={"bubble-item min-w-max alternative"}
-                >
-                  futuribles.fr
-                </a>
-              </li>
+              {projects.map((project) => (
+                <li key={project.id}>
+                  <Button
+                    label={project.title}
+                    link={project.link}
+                    target={"_blank"}
+                    theme={"alternative"}
+                  />
+                </li>
+              ))}
             </ul>
           </div>
         </div>
