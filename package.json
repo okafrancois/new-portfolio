@@ -11,6 +11,7 @@
     "deps": "yarn install"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.1.1",
     "axios": "^1.6.2",
     "gsap": "^3.12.3",
     "i18next": "^23.7.7",
