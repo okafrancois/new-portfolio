@@ -71,6 +71,7 @@ export default function FeaturedProject({ data }: FeaturedProjectProps) {
           icon={linkIcon}
           label={t("common:actions.seeWebsite")}
           link={data.link}
+          target={"_blank"}
         />
       </div>
     </div>
