@@ -39,7 +39,7 @@ export default function FeaturedProject({ data }: FeaturedProjectProps) {
         />
       </div>
       <div className={"details flex flex-col items-start justify-center"}>
-        <h3 className="role flex gap-x-2 mb-2 flex-wrap gap-y-2">
+        <h3 className="role flex gap-x-2 mb-2 md:min-w-max flex-wrap gap-y-2">
           <span
             className={
               "button text-sm md:text-base min-w-max post pl-2 primary gap-x-2"
