@@ -39,27 +39,37 @@ export default function FeaturedProject({ data }: FeaturedProjectProps) {
         />
       </div>
       <div className={"details flex flex-col items-start justify-center"}>
-        <h3 className="role flex gap-x-2 mb-2 min-w-max">
-          <span className={"button post pl-2 primary gap-x-2"}>
+        <h3 className="role flex gap-x-2 mb-2 flex-wrap gap-y-2">
+          <span
+            className={
+              "button text-sm md:text-base min-w-max post pl-2 primary gap-x-2"
+            }
+          >
             <span>
               <img
                 className={"dark:hidden aspect-square w-6 h-auto"}
                 src={profilPic}
-                alt="A photo of berny itoutou"
+                alt="berny itoutou"
               />
               <img
                 className={"hidden aspect-square w-6 h-auto dark:inline-block"}
                 src={profilPicDark}
-                alt="A photo of berny itoutou"
+                alt="berny itoutou"
               />
             </span>{" "}
             {data.role[currentLanguage]}
           </span>
-          <span className={"button enterprise alternative border-dashed"}>
+          <span
+            className={
+              "button text-sm md:text-base min-w-max enterprise alternative border-dashed"
+            }
+          >
             {data.enterprise}
           </span>
         </h3>
-        <ul className={"techs flex gap-x-2 mb-4"}>
+        <ul
+          className={"techs text-sm md:text-base flex flex-wrap gap-x-2 mb-4"}
+        >
           {data.technologies.map((item) => (
             <li key={item.id}>#{item.name}</li>
           ))}
