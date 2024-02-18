@@ -21,6 +21,7 @@ export default function Header() {
             });
           }}
           className={"icon"}
+          title={t("common:navigation.home")}
         >
           {logoIcon}
         </button>
@@ -55,12 +56,12 @@ export default function Header() {
               <img
                 className={"dark:hidden w-full"}
                 src={profilPic}
-                alt="My profil picture"
+                alt="Berny Itoutou"
               />
               <img
                 className={"hidden dark:inline w-full"}
                 src={profilPicDark}
-                alt="My profil picture"
+                alt="Berny Itoutou"
               />
             </>
           }

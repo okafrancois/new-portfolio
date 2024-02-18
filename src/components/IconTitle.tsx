@@ -16,7 +16,7 @@ export default function IconTitle({
   itemRef,
 }: Readonly<IconTitleProps>) {
   return (
-    <h3
+    <h2
       ref={itemRef}
       className={
         "flex mb-4 items-center gap-x-2 font-semibold font-cooper" +
@@ -26,6 +26,6 @@ export default function IconTitle({
     >
       <span className="icon w-6 aspect-square">{icon}</span>
       <span className="title">{title}</span>
-    </h3>
+    </h2>
   );
 }

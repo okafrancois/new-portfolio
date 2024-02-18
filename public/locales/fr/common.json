@@ -2,7 +2,8 @@
   "navigation": {
     "skills": "Compétences",
     "projects": "Projets",
-    "contact": "Contact"
+    "contact": "Contact",
+    "home": "Accueil"
   },
   "actions": {
     "contact": "Me contacter",

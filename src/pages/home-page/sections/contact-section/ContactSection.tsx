@@ -55,9 +55,9 @@ export default function ContactSection() {
         "contact-me py-8 md:min-h-[80vh] lg:min-h-[100vh] flex flex-col items-center justify-center text-center"
       }
     >
-      <h1 ref={sectionTitle} className={"text-[3rem] lg:text-[6rem] font-bold"}>
+      <h2 ref={sectionTitle} className={"text-[3rem] lg:text-[6rem] font-bold"}>
         {t("common:labels.letGetInTouch")}
-      </h1>
+      </h2>
       <p
         ref={sectionDesc}
         className={"lg:font-semibold  lg:text-xl max-w-[900px] mb-10"}

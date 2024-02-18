@@ -151,7 +151,7 @@ export default function CoverSection() {
               <li>
                 <p
                   className={
-                    "bubble-item min-w-max alternative border-dashed opacity-50 pointer-events-none"
+                    "bubble-item min-w-max alternative border-dashed opacity-80 pointer-events-none"
                   }
                 >
                   {t("common:resume.experience")}
@@ -161,7 +161,7 @@ export default function CoverSection() {
               <li className={"hidden md:block"}>
                 <p
                   className={
-                    "bubble-item min-w-max alternative border-dashed opacity-50 pointer-events-none"
+                    "bubble-item min-w-max alternative border-dashed opacity-80 pointer-events-none"
                   }
                 >
                   {t("common:resume.contract")}
@@ -170,7 +170,7 @@ export default function CoverSection() {
               <li>
                 <p
                   className={
-                    "bubble-item min-w-max alternative border-dashed opacity-50 pointer-events-none"
+                    "bubble-item min-w-max alternative border-dashed opacity-80 pointer-events-none"
                   }
                 >
                   {t("common:resume.location")}
