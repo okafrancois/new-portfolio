@@ -84,9 +84,9 @@ function SkillsBlock({ data, index = 0 }: Readonly<SkillsBlockTypes>) {
 
   return (
     <div ref={sectionRef} className="skill">
-      <h4 className="button lg:w-full primary skill-title mb-4">
+      <h3 className="button lg:w-full primary skill-title mb-4">
         {data.title[currentLang ?? "en"]}
-      </h4>
+      </h3>
 
       <ul className="skill-list flex flex-wrap gap-4">
         {data.skills.map((skill) => (
