@@ -1,20 +1,21 @@
 import IconTitle from "../../../../components/IconTitle.tsx";
-import { starIcon } from "../../../../assets/icon-lib.tsx";
 import Section from "../../../../layout/Section.tsx";
 import FeaturedProject from "./FeaturedProject.tsx";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
-import { customCubic } from "../../../../App.tsx";
 import { useTranslation } from "react-i18next";
 import useFetch from "../../../../hooks/useFetch.tsx";
 import { Project } from "./types.tsx";
+import ErrorComponent from "../../../../components/ErrorComponent.tsx";
+import Icon from "../../../../components/Icon.tsx";
+import { customCubic } from "../../../../assets/lib.ts";
 
 export default function ProjectsSection() {
   const { t } = useTranslation();
   const sectionTitle = useRef<HTMLHeadingElement | null>(null);
-  const { data } = useFetch("/api/projects/projects.json");
-
-  const [projects, setProjects] = useState<Project[]>([]);
+  const { data, loading, error } = useFetch<Project[]>(
+    "/api/projects/projects.json",
+  );
 
   useFadeInAnimation({
     ref: sectionTitle,
@@ -23,11 +24,8 @@ export default function ProjectsSection() {
     ease: customCubic,
   });
 
-  useEffect(() => {
-    if (data) {
-      setProjects(data as Project[]);
-    }
-  }, [data]);
+  if (loading) return <div>Loading...</div>;
+  if (error) return <ErrorComponent errorMessage={error} />;
 
   return (
     <Section
@@ -38,11 +36,11 @@ export default function ProjectsSection() {
         itemRef={sectionTitle}
         customClass={"!mb-15 text-xl"}
         title={t("common:labels.projectSelection")}
-        icon={starIcon}
+        icon={<Icon name={"starIcon"} />}
       />
 
       <div className="flex flex-col gap-20">
-        {projects.map((project, index) => (
+        {data?.map((project, index) => (
           <FeaturedProject data={project} key={project.id} index={index} />
         ))}
       </div>

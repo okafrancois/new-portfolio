@@ -1,0 +1,26 @@
+[
+  {
+    "id": "01FFETGR0CANJG55FKBYMBJ19Q",
+    "label": "Email",
+    "link": "mailto:itoutouberny@gmail.com",
+    "icon": "emailIcon"
+  },
+  {
+    "id": "01FFETGR0CANJG55FKBYMBJ19R",
+    "label": "LinkedIn",
+    "link": "https://www.linkedin.com/in/francois-itoutou/",
+    "icon": "linkedInIcon"
+  },
+  {
+    "id": "01FFETGR0CANJG55FKBYMBJ19S",
+    "label": "Malt",
+    "link": "https://www.malt.fr/profile/bernyfrancoisitoutou",
+    "icon": "maltIcon"
+  },
+  {
+    "id": "01FFETGR0CANJG55FKBYMBJ19T",
+    "label": "GitHub",
+    "link": "https://github.com/okafrancois",
+    "icon": "githubIcon"
+  }
+]

@@ -565,61 +565,35 @@ export const reduxIcon = (
   </svg>
 );
 
-export enum SkillIcon {
-  "react",
-  "typescript",
-  "javascript",
-  "html",
-  "css",
-  "sass",
-  "tailwind",
-  "git",
-  "wordpress",
-  "mongodb",
-  "figma",
-  "expressjs",
-  "docker",
-  "webflow",
-  "strapi",
-  "redux",
-  "github-actions",
-}
+export const icons = {
+  reactIcon,
+  typescriptIcon,
+  javascriptIcon,
+  htmlIcon,
+  cssIcon,
+  sassIcon,
+  tailwindIcon,
+  gitIcon,
+  wordpressIcon,
+  mongodbIcon,
+  figmaIcon,
+  expressIcon,
+  dockerIcon,
+  webflowIcon,
+  strapiIcon,
+  reduxIcon,
+  githubIcon,
+  emailIcon,
+  linkedInIcon,
+  maltIcon,
+  toolIcon,
+  starIcon,
+  infosBubbleIcon,
+  aboutIcon,
+};
 
-export function getSkillIcon(name: keyof typeof SkillIcon) {
-  switch (name) {
-    case "react":
-      return reactIcon;
-    case "typescript":
-      return typescriptIcon;
-    case "javascript":
-      return javascriptIcon;
-    case "html":
-      return htmlIcon;
-    case "css":
-      return cssIcon;
-    case "sass":
-      return sassIcon;
-    case "tailwind":
-      return tailwindIcon;
-    case "git":
-      return gitIcon;
-    case "wordpress":
-      return wordpressIcon;
-    case "mongodb":
-      return mongodbIcon;
-    case "figma":
-      return figmaIcon;
-    case "expressjs":
-      return expressIcon;
-    case "docker":
-      return dockerIcon;
-    case "webflow":
-      return webflowIcon;
-    case "strapi":
-      return strapiIcon;
-    case "redux":
-      return reduxIcon;
-    case "github-actions":
-      return githubIcon;
-  }
+export type IconName = keyof typeof icons;
+
+export function getIcon(name: keyof typeof icons) {
+  return icons[name];
 }

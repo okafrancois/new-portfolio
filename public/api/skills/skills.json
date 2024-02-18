@@ -9,47 +9,47 @@
       {
         "id": "01FG1WW863HXDVRM48TE1V98Q9",
         "name": "HTML",
-        "icon": "html"
+        "icon": "htmlIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98Q9",
         "name": "CSS",
-        "icon": "css"
+        "icon": "cssIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QB",
         "name": "JavaScript",
-        "icon": "javascript"
+        "icon": "javascriptIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QC",
         "name": "Typescript",
-        "icon": "typescript"
+        "icon": "typescriptIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QD",
         "name": "ReactJS",
-        "icon": "react"
+        "icon": "reactIcon"
       },
       {
         "id": "01FG1WY863HX2VRM48TE1V98QD",
         "name": "Redux toolkit",
-        "icon": "redux"
+        "icon": "reduxIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QE",
         "name": "Tailwind CSS",
-        "icon": "tailwind"
+        "icon": "tailwindIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QF",
         "name": "Sass",
-        "icon": "sass"
+        "icon": "sassIcon"
       },
       {
         "id": "01FG1WY863H2DVRM48TE1V98QG",
         "name": "Webflow",
-        "icon": "webflow"
+        "icon": "webflowIcon"
       }
     ]
   },
@@ -63,17 +63,17 @@
       {
         "id": "01FG1WY863HXDVRM48TE1V98QH",
         "name": "MongoDB",
-        "icon": "mongodb"
+        "icon": "mongodbIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QI",
         "name": "Express Js",
-        "icon": "expressjs"
+        "icon": "expressjsIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QJ",
         "name": "Strapi",
-        "icon": "strapi"
+        "icon": "strapiIcon"
       }
     ]
   },
@@ -87,27 +87,27 @@
       {
         "id": "01FG1WY863HXDVRM48TE1V98QN",
         "name": "Wordpress",
-        "icon": "wordpress"
+        "icon": "wordpressIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QM",
         "name": "Figma",
-        "icon": "figma"
+        "icon": "figmaIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QO",
         "name": "Git",
-        "icon": "git"
+        "icon": "gitIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QP",
         "name": "Github Actions",
-        "icon": "github-actions"
+        "icon": "githubIcon"
       },
       {
         "id": "01FG1WY863HXDVRM48TE1V98QQ",
         "name": "Docker",
-        "icon": "docker"
+        "icon": "dockerIcon"
       }
     ]
   }

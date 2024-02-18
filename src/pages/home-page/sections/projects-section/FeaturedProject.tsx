@@ -5,7 +5,7 @@ import profilPic from "../../../../assets/img/profile-pic-berny-itouou.png";
 import profilPicDark from "../../../../assets/img/ellipse-photo-dark.png";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
-import { customCubic } from "../../../../App.tsx";
+import { customCubic } from "../../../../assets/lib.ts";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 
@@ -14,7 +14,9 @@ interface FeaturedProjectProps {
   index: number;
 }
 
-export default function FeaturedProject({ data }: FeaturedProjectProps) {
+export default function FeaturedProject({
+  data,
+}: Readonly<FeaturedProjectProps>) {
   const currentLanguage = i18n.language;
   const { t } = useTranslation();
   const projectBlock = useRef<HTMLDivElement | null>(null);

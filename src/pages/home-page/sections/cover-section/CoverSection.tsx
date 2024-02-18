@@ -1,13 +1,13 @@
 import IconTitle from "../../../../components/IconTitle.tsx";
-import { aboutIcon, infosBubbleIcon } from "../../../../assets/icon-lib.tsx";
 import Section from "../../../../layout/Section.tsx";
 import { Button } from "../../../../components/Button.tsx";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
-import { customCubic } from "../../../../App.tsx";
+import { customCubic } from "../../../../assets/lib.ts";
 import { useTranslation } from "react-i18next";
+import Icon from "../../../../components/Icon.tsx";
 
-const projects = [
+const featuresProjects = [
   {
     id: "sowen-group",
     title: "sowen-group.fr",
@@ -24,6 +24,7 @@ const projects = [
     link: "https://futuribles.fr",
   },
 ];
+
 export default function CoverSection() {
   const { t } = useTranslation();
   const subtitleRef = useRef<HTMLElement | null>(null);
@@ -31,42 +32,43 @@ export default function CoverSection() {
   const titleCover = useRef<HTMLElement | null>(null);
   const coverButton = useRef<HTMLDivElement | null>(null);
   const coverDetailsRef = useRef<HTMLDivElement>(null);
-
-  useFadeInAnimation({
-    ref: subtitleRef,
+  const defaultConf: {
+    duration: number;
+    ease: string;
+    animationType: "fadeInUp";
+  } = {
     duration: 0.5,
     ease: customCubic,
     animationType: "fadeInUp",
+  };
+
+  useFadeInAnimation({
+    ref: subtitleRef,
+    ...defaultConf,
   });
 
   useFadeInAnimation({
     ref: titleRef,
-    duration: 0.5,
     delay: 0.1,
-    ease: customCubic,
-    animationType: "fadeInUp",
+    ...defaultConf,
   });
 
   useFadeInAnimation({
     ref: titleCover,
-    duration: 0.5,
     delay: 0.2,
-    ease: customCubic,
-    animationType: "fadeInUp",
+    ...defaultConf,
   });
 
   useFadeInAnimation({
     ref: coverButton,
-    duration: 0.5,
     delay: 0.2,
-    ease: customCubic,
-    animationType: "fadeInUp",
+    ...defaultConf,
   });
 
   useFadeInAnimation({
     ref: coverDetailsRef,
-    duration: 0.5,
     delay: 0.5,
+    duration: 0.5,
   });
 
   return (
@@ -114,7 +116,7 @@ export default function CoverSection() {
           <IconTitle
             customClass={"mb-3"}
             title={t("common:labels.aboutMe")}
-            icon={aboutIcon}
+            icon={<Icon name={"aboutIcon"} />}
           />
           <p className="text lg:pl-8">{t("common:labels.coverQuote")}</p>
         </div>
@@ -122,7 +124,7 @@ export default function CoverSection() {
           <IconTitle
             customClass={"mb-3"}
             title={t("common:labels.quickResume")}
-            icon={infosBubbleIcon}
+            icon={<Icon name={"infosBubbleIcon"} />}
           />
           <div className="lg:pl-8 details-rows flex flex-col gap-y-2">
             <ul className={"details-items flex flex-wrap gap-2"}>
@@ -176,7 +178,7 @@ export default function CoverSection() {
               </li>
             </ul>
             <ul className={"details-items flex flex-wrap gap-2"}>
-              {projects.map((project) => (
+              {featuresProjects.map((project) => (
                 <li key={project.id}>
                   <Button
                     label={project.title}

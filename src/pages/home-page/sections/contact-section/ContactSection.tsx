@@ -1,74 +1,52 @@
 import Section from "../../../../layout/Section.tsx";
-import { ulid } from "ulid";
-import {
-  emailIcon,
-  githubIcon,
-  linkedInIcon,
-  maltIcon,
-} from "../../../../assets/icon-lib.tsx";
+import { IconName } from "../../../../assets/icon-lib.tsx";
 import { Button } from "../../../../components/Button.tsx";
-import { ReactNode, useRef } from "react";
+import { useRef } from "react";
 import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
-import { customCubic } from "../../../../App.tsx";
 import { useTranslation } from "react-i18next";
+import useFetch from "../../../../hooks/useFetch.tsx";
+import ErrorComponent from "../../../../components/ErrorComponent.tsx";
+import Icon from "../../../../components/Icon.tsx";
+import { customCubic } from "../../../../assets/lib.ts";
 
-const contacts: {
+interface Contact {
   id: string;
   label: string;
-  icon: ReactNode;
   link: string;
-}[] = [
-  {
-    id: ulid(),
-    label: "Email",
-    icon: emailIcon,
-    link: "mailto:itoutouberny@gmail.com",
-  },
-  {
-    id: ulid(),
-    label: "Linkedin",
-    icon: linkedInIcon,
-    link: "https://www.linkedin.com/in/francois-itoutou/",
-  },
-  {
-    id: ulid(),
-    label: "Malt",
-    icon: maltIcon,
-    link: "https://www.malt.fr/profile/bernyfrancoisitoutou",
-  },
-  {
-    id: ulid(),
-    label: "Github",
-    icon: githubIcon,
-    link: "https://github.com/okafrancois",
-  },
-];
+  icon: IconName;
+}
+
 export default function ContactSection() {
   const { t } = useTranslation();
   const sectionTitle = useRef<HTMLHeadingElement | null>(null);
   const sectionDesc = useRef<HTMLParagraphElement | null>(null);
+  const { data, loading, error } = useFetch<Contact[]>(
+    "/api/contacts/contacts.json",
+  );
   const linksBlock = useRef<HTMLDivElement | null>(null);
-
-  useFadeInAnimation({
-    ref: sectionTitle,
+  const defaultFade = {
     duration: 0.5,
     triggerScroll: true,
     ease: customCubic,
+  };
+
+  useFadeInAnimation({
+    ref: sectionTitle,
+    ...defaultFade,
   });
 
   useFadeInAnimation({
     ref: sectionDesc,
-    duration: 0.5,
-    triggerScroll: true,
-    ease: customCubic,
+    ...defaultFade,
   });
 
   useFadeInAnimation({
     ref: linksBlock,
-    duration: 0.5,
-    triggerScroll: true,
-    ease: customCubic,
+    ...defaultFade,
   });
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <ErrorComponent errorMessage={error} />;
 
   return (
     <Section
@@ -96,12 +74,12 @@ export default function ContactSection() {
             "contacts-links flex flex-wrap justify-center lg:justify-start gap-4"
           }
         >
-          {contacts.map((item) => (
+          {data?.map((item) => (
             <li key={item.id} className={"inline"}>
               <Button
                 theme={"alternative"}
                 link={item.link}
-                icon={item.icon}
+                icon={<Icon name={item.icon} />}
                 label={item.label}
                 target={"_blank"}
               />

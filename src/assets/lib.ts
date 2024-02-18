@@ -1,0 +1,1 @@
+export const customCubic = "cubic-bezier(.36,.85,.18,.97)";

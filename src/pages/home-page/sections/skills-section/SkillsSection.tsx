@@ -1,24 +1,22 @@
-import {
-  getSkillIcon,
-  SkillIcon,
-  toolIcon,
-} from "../../../../assets/icon-lib.tsx";
-import { useEffect, useRef, useState } from "react";
+import { IconName } from "../../../../assets/icon-lib.tsx";
+import { useRef } from "react";
 import Section from "../../../../layout/Section.tsx";
 import IconTitle from "../../../../components/IconTitle.tsx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useFadeInAnimation } from "../../../../hooks/useFadeAnimation.tsx";
-import { customCubic } from "../../../../App.tsx";
 import { useTranslation } from "react-i18next";
 import useFetch from "../../../../hooks/useFetch.tsx";
+import ErrorComponent from "../../../../components/ErrorComponent.tsx";
+import Icon from "../../../../components/Icon.tsx";
+import { customCubic } from "../../../../assets/lib.ts";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export interface Skill {
   id: string;
   name: string;
-  icon: string;
+  icon: IconName;
 }
 
 interface SkillSection {
@@ -33,8 +31,9 @@ interface SkillSection {
 export default function SkillsSection() {
   const { t } = useTranslation();
   const titleRef = useRef<HTMLHeadingElement | null>(null);
-  const { data } = useFetch("/api/skills/skills.json");
-  const [skills, setSkills] = useState<SkillSection[]>([]);
+  const { data, loading, error } = useFetch<SkillSection[]>(
+    "/api/skills/skills.json",
+  );
 
   useFadeInAnimation({
     ref: titleRef,
@@ -43,11 +42,8 @@ export default function SkillsSection() {
     ease: customCubic,
   });
 
-  useEffect(() => {
-    if (data) {
-      setSkills(data as SkillSection[]);
-    }
-  }, [data]);
+  if (loading) return <div>Loading...</div>;
+  if (error) return <ErrorComponent errorMessage={error} />;
 
   return (
     <Section id={"skills"} customClass={"py-5 lg:py-[10rem] flex flex-col"}>
@@ -55,13 +51,13 @@ export default function SkillsSection() {
         itemRef={titleRef}
         customClass={"!mb-15 text-xl"}
         title={t("common:labels.aboutMySkills")}
-        icon={toolIcon}
+        icon={<Icon name={"toolIcon"} />}
       />
 
       <div
         className={`skills lg:max-w-[80vw] w-full mx-auto grid gap-10 grid-cols-1 lg:grid-cols-3`}
       >
-        {skills.map((data, index) => (
+        {data?.map((data, index) => (
           <SkillsBlock key={data.id} data={data} index={index} />
         ))}
       </div>
@@ -74,7 +70,7 @@ interface SkillsBlockTypes {
   index: number;
 }
 
-function SkillsBlock({ data, index = 0 }: SkillsBlockTypes) {
+function SkillsBlock({ data, index = 0 }: Readonly<SkillsBlockTypes>) {
   const currentLang = localStorage.getItem("i18nextLng");
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
@@ -106,7 +102,7 @@ function SkillsBlock({ data, index = 0 }: SkillsBlockTypes) {
   );
 }
 
-function Skill({ name, icon }: Skill) {
+function Skill({ name, icon }: Readonly<Skill>) {
   return (
     <li
       className={
@@ -114,7 +110,7 @@ function Skill({ name, icon }: Skill) {
       }
     >
       <span className={"w-6 h-6 aspect-square"}>
-        {getSkillIcon(icon as keyof typeof SkillIcon)}
+        <Icon name={icon} />
       </span>
       <span>{name}</span>
     </li>

@@ -1,39 +1,46 @@
 import { useState, useEffect } from "react";
 
-export default function useFetch(url: string): {
-  data: object | object[] | null;
-  isPending: boolean;
-  error: string | null;
-} {
-  const [data, setData] = useState<object | object[] | null>(null);
-  const [isPending, setIsPending] = useState<boolean>(true);
+export default function useFetch<T>(url: string) {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const abortCont = new AbortController();
+    const abortController = new AbortController();
 
-    fetch(url, { signal: abortCont.signal })
-      .then((res) => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(url, { signal: abortController.signal });
         if (!res.ok) {
-          throw Error("Could not fetch the data for that resource");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setData(data);
-        setIsPending(false);
-        setError(null);
-      })
-      .catch((err) => {
-        if (err.name === "AbortError") {
-        } else {
-          setIsPending(false);
-          setError(err.message);
-        }
-      });
+          const errorText = await res.text();
 
-    return () => abortCont.abort();
+          setError(errorText);
+          console.error("Error:", errorText);
+        } else {
+          const data = (await res.json()) as T;
+
+          setData(data);
+          setError(null);
+        }
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          if (err.name === "AbortError") {
+            console.log("Fetch aborted");
+          } else {
+            setError(err.message);
+          }
+        } else {
+          setError("Something went wrong");
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    void fetchData();
+
+    return () => abortController.abort();
   }, [url]);
 
-  return { data, isPending, error };
+  return { data, loading, error };
 }
